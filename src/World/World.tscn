@@ -16,7 +16,7 @@ scroll_speed = 0.5
 
 [node name="BG" type="TextureRect" parent="."]
 margin_left = 320.0
-margin_right = 4320.0
+margin_right = 8320.0
 margin_bottom = 320.0
 rect_rotation = 90.0
 texture = SubResource( 2 )

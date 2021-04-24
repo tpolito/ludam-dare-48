@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fishTilesheet.png-6ed4489c5da43b9139e9db7f0721258d.stex"
+path="res://.import/sprites.png-bb36f92a96c2b9ad48a8528dbf01963e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fishTilesheet.png"
-dest_files=[ "res://.import/fishTilesheet.png-6ed4489c5da43b9139e9db7f0721258d.stex" ]
+source_file="res://assets/sprites.png"
+dest_files=[ "res://.import/sprites.png-bb36f92a96c2b9ad48a8528dbf01963e.stex" ]
 
 [params]
 
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

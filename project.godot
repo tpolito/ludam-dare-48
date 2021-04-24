@@ -30,6 +30,10 @@ config/name="Ludum Dare 48"
 run/main_scene="res://src/World/World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Utils="*res://src/Utils/Utils.gd"
+
 [display]
 
 window/size/width=320
