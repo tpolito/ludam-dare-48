@@ -6,8 +6,6 @@ func _ready():
 func _physics_process(delta):
 	var direction: = get_direction();
 	velocity = speed * direction
-	
-	
 
 func get_direction() -> Vector2:
 	return Vector2(
