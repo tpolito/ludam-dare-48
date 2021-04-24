@@ -1,20 +1,18 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/player.png" type="Texture" id=1]
+[ext_resource path="res://assets/player.tres" type="Texture" id=1]
 [ext_resource path="res://src/Units/Player.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 25.0285, 10.4797 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 38.3461, 29.4001 )
 script = ExtResource( 2 )
 
 [node name="player" type="Sprite" parent="."]
-position = Vector2( -0.791885, -1.32433 )
-scale = Vector2( 0.614583, 0.270833 )
+rotation = 1.5708
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.794586, -1.32433 )
-shape = SubResource( 1 )
+position = Vector2( 0.0396883, 0.0105089 )
+shape = SubResource( 3 )

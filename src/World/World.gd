@@ -11,6 +11,6 @@ func _ready():
 
 func _process(delta):
 	time += delta * time_mult
-	print(time)
+#	print(time)
 	# This scrolls the background based on the time.
 	bg.rect_position.y -= scroll_speed
