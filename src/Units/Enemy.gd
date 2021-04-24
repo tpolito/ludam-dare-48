@@ -16,13 +16,6 @@ func _physics_process(delta):
 		queue_free()
 	velocity = speed * Vector2.UP
 
-func _on_CollisionDetector_body_entered(body):
-	if body.size >= self.size:
-		body.increase_size()
-		queue_free()
-	else:
-		body.die()
-
 func random_sprite() -> void:
 	var random_fish_texture = Utils.choose([blue_fish, purple_fish, red_fish, puffer_fish])
 	sprite.texture = random_fish_texture

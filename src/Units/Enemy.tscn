@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Units/Enemy.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 25.8231, 8.09593 )
+extents = Vector2( 25.349, 7.88301 )
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 2
@@ -11,10 +11,6 @@ script = ExtResource( 2 )
 
 [node name="enemy" type="Sprite" parent="."]
 
-[node name="CollisionDetector" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]
-position = Vector2( 0.280625, 0.841856 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.280594, 1.40309 )
 shape = SubResource( 1 )
-
-[connection signal="body_entered" from="CollisionDetector" to="." method="_on_CollisionDetector_body_entered"]
