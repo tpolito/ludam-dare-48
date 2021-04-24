@@ -2,7 +2,7 @@ extends Unit
 signal eat
 
 func _ready():
-	self.size = 999
+	pass
 
 func _physics_process(delta):
 	if position.y < -10:

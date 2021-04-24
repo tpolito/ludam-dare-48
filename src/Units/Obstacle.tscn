@@ -7,12 +7,12 @@
 extents = Vector2( 25.8231, 11.1668 )
 
 [node name="Obstacle" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 1 )
+size = 999
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="CollisionDetector" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
