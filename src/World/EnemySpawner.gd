@@ -1,5 +1,7 @@
 extends Node2D
 
+const Enemy = preload("res://src/Units/Enemy.tscn")
+
 onready var timer = $SpawnTimer
 
 var fish_array = ['fish1', 'fish2', 'fish3']
