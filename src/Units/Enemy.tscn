@@ -10,7 +10,6 @@ extents = Vector2( 25.8231, 8.09593 )
 position = Vector2( 154.202, 34.7948 )
 collision_layer = 2
 script = ExtResource( 2 )
-size = 10
 
 [node name="enemy" type="Sprite" parent="."]
 position = Vector2( 0.0184784, -0.74736 )
