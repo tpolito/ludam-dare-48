@@ -11,5 +11,6 @@ func instance_scene_on_main(scene, position):
 	return instance
 
 func choose(array):
+	randomize()
 	array.shuffle()
 	return array.front()
