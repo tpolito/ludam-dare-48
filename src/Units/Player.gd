@@ -7,6 +7,8 @@ func _ready():
 	size = 2
 	
 func _physics_process(delta):
+
+	self.position = stay_within_bounds(position)
 	stamina = stamina_calculator(stamina)
 	var direction: = get_direction();
 	velocity = (speed*stamina) * direction
@@ -19,6 +21,17 @@ func _on_EnemyDetector_body_entered(body):
 		stamina = stamina + stamina_increase_rate
 	else:
 		die()
+		
+func stay_within_bounds(position):
+	var max_x = OS.window_size.x
+	var max_y = OS.window_size.y
+	var min_x = 0
+	var min_y = 0
+	
+	position = Vector2(max(position.x,min_x),max(position.y,min_y))
+	position = Vector2(min(position.x,max_x),min(position.y,max_y))
+	
+	return position
 
 func get_direction() -> Vector2:
 	return Vector2(
