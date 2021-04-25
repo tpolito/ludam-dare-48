@@ -5,14 +5,20 @@ onready var pause_menu = $PauseMenu
 onready var resume_button = $PauseMenu/VBoxContainer/
 onready var exit_button = $PauseMenu/VBoxContainer/ExitButton
 
+onready var debug_menu = $Debug
+onready var stamina_label = $Debug/Stamina
+
 var time: float = 0
 export var time_mult: float = .2
 export var scroll_speed: float = 2
+export var debug_mode = false
 
 func _ready():
-	pass
+	if debug_mode == true:
+		debug_menu.visible = true
 
 func _process(delta):
+	stamina_label.text = "Stamina: " + str($Player.stamina.x)
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().paused = true
 		pause_menu.visible = true
@@ -22,7 +28,6 @@ func _process(delta):
 
 func _on_ExitButton_pressed():
 	get_tree().quit()
-
 
 func _on_ResumeButton_pressed():
 	pause_menu.visible = false
