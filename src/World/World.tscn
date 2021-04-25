@@ -129,16 +129,6 @@ script = ExtResource( 6 )
 [node name="Ambient" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 5 )
 
-<<<<<<< Updated upstream
-[node name="Eat" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource( 7 )
-volume_db = -20.0
-
-[node name="Die" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource( 8 )
-volume_db = -10.0
-=======
->>>>>>> Stashed changes
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="GameOver/VBoxContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
