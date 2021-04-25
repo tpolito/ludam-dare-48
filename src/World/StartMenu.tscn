@@ -44,15 +44,15 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="Control/VBoxContainer"]
-margin_top = 68.0
+margin_top = 67.0
 margin_right = 382.0
-margin_bottom = 88.0
+margin_bottom = 87.0
 text = "Start Game"
 
 [node name="ExitButton" type="Button" parent="Control/VBoxContainer"]
-margin_top = 92.0
+margin_top = 91.0
 margin_right = 382.0
-margin_bottom = 112.0
+margin_bottom = 111.0
 text = "Exit Game"
 
 [connection signal="pressed" from="Control/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
