@@ -27,6 +27,9 @@ func _process(delta):
 	time += delta * time_mult
 	# This scrolls the background based on the time.
 	bg.rect_position.y -= scroll_speed
+	
+	if $AudioStreamPlayer.playing == false:
+		$AudioStreamPlayer.play()
 
 func _on_ExitButton_pressed():
 	get_tree().quit()
