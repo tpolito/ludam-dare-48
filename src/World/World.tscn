@@ -5,11 +5,11 @@
 [ext_resource path="res://src/World/EnemySpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/World/ObstacleSpawner.tscn" type="PackedScene" id=4]
 
-[sub_resource type="Gradient" id=1]
+[sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0.389404, 0.809341, 0.90625, 1, 0.0228, 0.05624, 0.19, 1 )
 
 [sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
+gradient = SubResource( 3 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 0.471924, 0 )
@@ -80,7 +80,6 @@ margin_right = 410.0
 margin_bottom = 138.0
 text = "Exit"
 
-
 [node name="GameOver" type="Control" parent="."]
 pause_mode = 2
 visible = false
@@ -118,7 +117,6 @@ margin_top = 127.0
 margin_right = 410.0
 margin_bottom = 147.0
 text = "Main Menu"
-
 
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

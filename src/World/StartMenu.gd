@@ -3,6 +3,9 @@ extends Node2D
 onready var start_button = $Control/VBoxContainer/StartButton
 onready var exit_button = $Control/VBoxContainer/ExitButton
 
+func _ready():
+	get_tree().paused = false
+
 func _on_StartButton_pressed():
 	get_tree().change_scene("res://src/World/World.tscn")
 

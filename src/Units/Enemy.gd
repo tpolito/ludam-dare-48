@@ -18,8 +18,11 @@ func _ready():
 
 func _physics_process(delta):
 	remove_on_exit()
-	look_at(player.position)
-	velocity = calculate_velocity(movement_pattern)
+	if player:
+		look_at(player.position)
+		velocity = calculate_velocity(movement_pattern)
+	else:
+		velocity = Vector2.UP * speed
 
 func remove_on_exit():
 	if position.y < -10:
