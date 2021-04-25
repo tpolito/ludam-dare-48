@@ -1,6 +1,7 @@
 extends Unit
 
 var stamina = Vector2(1000,1000)
+signal die
 
 func _ready():
 	size = 2
@@ -39,5 +40,5 @@ func can_eat(body):
 	return self.size >= body.size
 
 func die():
-	get_tree().reload_current_scene()
-	
+	emit_signal('die')
+	queue_free()
