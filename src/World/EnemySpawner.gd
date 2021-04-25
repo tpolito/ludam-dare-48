@@ -21,4 +21,4 @@ func populate_fish_array(time) -> void:
 
 func random_x_pos() -> int:
 	rng.randomize()
-	return rng.randf_range(100,900)
+	return rng.randf_range(50,1000)

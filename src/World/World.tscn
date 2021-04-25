@@ -43,7 +43,7 @@ margin_bottom = 14.0
 text = "Stamina: 100"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 50.3461, 39.4001 )
+position = Vector2( 479.979, 38.1402 )
 
 [node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
 

@@ -2,7 +2,7 @@ extends Unit
 signal eat
 
 func _ready():
-	pass
+	rotation_degrees = rad2deg(rand_range(0, 360))
 
 func _physics_process(delta):
 	if position.y < -10:
