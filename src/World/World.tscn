@@ -6,11 +6,11 @@
 [ext_resource path="res://src/World/ObstacleSpawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Bio Unit - Satellite.ogg" type="AudioStream" id=5]
 
-[sub_resource type="Gradient" id=1]
+[sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0.389404, 0.809341, 0.90625, 1, 0.0228, 0.05624, 0.19, 1 )
 
 [sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
+gradient = SubResource( 3 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 0.471924, 0 )
@@ -121,6 +121,7 @@ text = "Main Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="GameOver/VBoxContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
