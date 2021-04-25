@@ -5,11 +5,11 @@
 [ext_resource path="res://src/World/EnemySpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/World/ObstacleSpawner.tscn" type="PackedScene" id=4]
 
-[sub_resource type="Gradient" id=1]
+[sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0.389404, 0.809341, 0.90625, 1, 0.0228, 0.05624, 0.19, 1 )
 
 [sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
+gradient = SubResource( 3 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
