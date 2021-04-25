@@ -46,7 +46,6 @@ func _on_MainMenuButton_pressed():
 	get_tree().change_scene("res://src/World/StartMenu.tscn")
 
 func _on_Player_die() -> void:
-	
 	get_tree().paused = true
 	game_over.visible = true
 	sounds.play_sound("Die")
