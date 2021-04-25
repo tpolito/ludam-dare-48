@@ -9,6 +9,8 @@ onready var game_over = $GameOver
 onready var debug_menu = $Debug
 onready var stamina_label = $Debug/Stamina
 
+onready var sounds = $Sounds
+
 var time: float = 0
 export var time_mult: float = .2
 export var scroll_speed: float = 2
@@ -27,9 +29,7 @@ func _process(delta):
 	time += delta * time_mult
 	# This scrolls the background based on the time.
 	bg.rect_position.y -= scroll_speed
-	
-	if $AudioStreamPlayer.playing == false:
-		$AudioStreamPlayer.play()
+	sounds.play_ambient("Ambient")
 
 func _on_ExitButton_pressed():
 	get_tree().quit()
@@ -46,5 +46,8 @@ func _on_MainMenuButton_pressed():
 	get_tree().change_scene("res://src/World/StartMenu.tscn")
 
 func _on_Player_die() -> void:
+	
 	get_tree().paused = true
 	game_over.visible = true
+	sounds.play_sound("Die")
+	sounds.stop("Ambient")

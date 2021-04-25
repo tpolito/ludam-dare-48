@@ -1,6 +1,8 @@
 extends Unit
 
 var stamina = Vector2(1000,1000)
+
+onready var sounds = get_parent().get_node("Sounds")
 signal die
 
 func _ready():
@@ -15,6 +17,7 @@ func _physics_process(delta):
 
 func _on_EnemyDetector_body_entered(body):
 	if can_eat(body): 
+		sounds.play_sound("Eat")
 		var stamina_increase_rate = Vector2(200,200)
 		self.increase_size()
 		body.queue_free()
