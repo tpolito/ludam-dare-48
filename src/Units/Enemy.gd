@@ -12,10 +12,13 @@ func _ready():
 	random_sprite()
 
 func _physics_process(delta):
-	if position.y < -10:
-		queue_free()
+	remove_on_exit()
 	velocity = speed * Vector2.UP
 
 func random_sprite() -> void:
 	var random_fish_texture = Utils.choose([blue_fish, purple_fish, red_fish, puffer_fish])
 	sprite.texture = random_fish_texture
+
+func remove_on_exit():
+	if position.y < -10:
+		queue_free()
