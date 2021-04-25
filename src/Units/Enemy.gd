@@ -10,11 +10,13 @@ onready var sprite = $enemy
 onready var player = get_parent().get_node("Player")
 onready var movement_pattern : String
 var movement_patterns = ["UP","TOWARDS_AWAY_PLAYER"]
+var rng = RandomNumberGenerator.new()
 
 
 func _ready():
 	random_sprite()
 	movement_pattern = movement_patterns[randi() % movement_patterns.size()]
+	speed = rng.randi_range(1,2) * speed
 
 func _physics_process(delta):
 	remove_on_exit()
