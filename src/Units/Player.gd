@@ -9,7 +9,6 @@ func _physics_process(delta):
 	stamina = stamina_calculator(stamina)
 	var direction: = get_direction();
 	velocity = (speed*stamina) * direction
-	print(stamina);
 
 func _on_EnemyDetector_body_entered(body):
 	if self.size >= body.size: 

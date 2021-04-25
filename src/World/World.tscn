@@ -13,11 +13,11 @@ gradient = SubResource( 3 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
-time_mult = 1.0
+time_mult = 0.1
 
 [node name="BG" type="TextureRect" parent="."]
 margin_left = 1024.0
-margin_right = 9024.0
+margin_right = 17024.0
 margin_bottom = 1024.0
 rect_rotation = 90.0
 texture = SubResource( 2 )
@@ -33,3 +33,37 @@ position = Vector2( 50.3461, 39.4001 )
 [node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
 
 [node name="ObstacleSpawner" parent="." instance=ExtResource( 4 )]
+
+[node name="PauseMenu" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 1023.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+margin_left = 291.0
+margin_top = 188.946
+margin_right = 701.0
+margin_bottom = 421.946
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/VBoxContainer"]
+margin_top = 94.0
+margin_right = 410.0
+margin_bottom = 114.0
+text = "Resume"
+
+[node name="ExitButton" type="Button" parent="PauseMenu/VBoxContainer"]
+margin_top = 118.0
+margin_right = 410.0
+margin_bottom = 138.0
+text = "Exit"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
