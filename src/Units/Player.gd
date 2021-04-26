@@ -4,6 +4,7 @@ var stamina = Vector2(1000,1000)
 
 onready var sounds = get_parent().get_node("Sounds")
 signal die
+signal ate_fish
 
 func _ready():
 	size = 2
@@ -18,13 +19,14 @@ func _physics_process(delta):
 func _on_EnemyDetector_body_entered(body):
 	if can_eat(body): 
 		sounds.play_sound("Eat")
+		emit_signal("ate_fish")
 		var stamina_increase_rate = Vector2(200,200)
 		self.increase_size()
 		body.queue_free()
 		stamina = stamina + stamina_increase_rate
 	else:
 		die()
-		
+
 func stay_within_bounds(position):
 	var max_x = OS.window_size.x
 	var max_y = OS.window_size.y
@@ -57,4 +59,4 @@ func can_eat(body):
 
 func die():
 	emit_signal('die')
-	queue_free()
+#	queue_free()
