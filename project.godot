@@ -26,8 +26,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Ludum Dare 48"
-run/main_scene="res://src/World/World.tscn"
+config/name="Eat Fishies"
+config/description="A action packed, rougelike adventure game where you must fight against the odds to go deeper and deeper until you reach the bottom of the ocean."
+run/main_scene="res://src/World/StartMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

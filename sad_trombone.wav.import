@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sad_trombone.wav-35d44e0f2dcac2519aa60658ba44860b.sample"
+
+[deps]
+
+source_file="res://sad_trombone.wav"
+dest_files=[ "res://.import/sad_trombone.wav-35d44e0f2dcac2519aa60658ba44860b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
