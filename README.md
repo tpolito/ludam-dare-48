@@ -1,4 +1,4 @@
-# Untitled Game About a fish
+# Eat Fishies
 Go down  
 Eat smaller fish  
 Avoid skeletons  
