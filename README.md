@@ -1,6 +1,6 @@
 # Eat Fishies
 Go down  
-Eat smaller fish  
+Eat fish  
 Avoid skeletons  
 
 https://poetril.itch.io/eat-fishies
